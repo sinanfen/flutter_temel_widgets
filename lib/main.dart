@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_temel_widgets/dropdown_buton_kullanimi.dart';
 import 'package:flutter_temel_widgets/image_widgets.dart';
 import 'package:flutter_temel_widgets/my_counter_page.dart';
+import 'package:flutter_temel_widgets/popupmenu_kullanimi.dart';
 import 'package:flutter_temel_widgets/temel_buton_turleri.dart';
 
 void main() {
@@ -16,11 +18,16 @@ class MyApp extends StatelessWidget {
     debugPrint('myapp metodu çalıştı');
     return MaterialApp(
       title: "My counter app",
-      theme: ThemeData(primarySwatch: Colors.purple, textTheme: TextTheme(headline1: TextStyle(color: Colors.purple))),
+      theme: ThemeData(
+          primarySwatch: Colors.purple,
+          textTheme: TextTheme(headline1: TextStyle(color: Colors.purple))),
       home: Scaffold(
-        appBar: AppBar(title: Text('Image Ornekleri')),
+        appBar: AppBar(
+          title: Text('Image Ornekleri'),
+          actions: [PopupMenuKullanimi()],
+        ),
         // body: ImageOrnekleri(),
-        body: TemelButonlar(),
+        body: PopupMenuKullanimi(),
       ),
     );
   }
